@@ -8,6 +8,6 @@ import java.util.List;
 
 public interface StudentRepository extends JpaRepository<Student, Long> {
 
-    @Query(value = "SELECT FROM Student order by RAND() LIMIT 10", nativeQuery = true)
+    @Query(value = "SELECT * FROM Student order by RAND() LIMIT 10", nativeQuery = true)
     List<Student> findRand();
 }
